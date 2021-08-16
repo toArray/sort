@@ -12,7 +12,7 @@ CountingSortStable
 */
 func CountingSortStable(arr []CountingSortModel) (res []CountingSortModel) {
 	//统计次数
-	maxNum, minNum := getMaxNumModel(arr)
+	maxNum, minNum := getMaxMinOfModel(arr)
 	lenNum := maxNum - minNum + 1
 	countSlice := make([]int32, lenNum)
 	for _, value := range arr {

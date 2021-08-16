@@ -8,12 +8,12 @@ package sort
 BucketSort
 @Desc:桶排序
 @Param:arr 			[]float64	待排数据
-@Param:bucketCount 	int32		自定义桶个数
+@Param:bucketCount	int32		自定义桶个数
 @Return:			[]float64	排序结果
 */
 func BucketSort(arr []float64, bucketCount int32) []float64 {
 	//定义桶的个数
-	maxNum, _ := getMaxNumFloat64(arr)
+	maxNum, _ := getMaxMinFloat64(arr)
 	if bucketCount <= 0 {
 		bucketCount = int32(len(arr))
 	}

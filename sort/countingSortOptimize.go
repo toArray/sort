@@ -16,7 +16,7 @@ func CountingSortOptimize(arr []int32) (res []int32) {
 	}
 
 	//获得最大值并开始记录
-	maxNum, minNum := getMaxNum(arr)
+	maxNum, minNum := getMaxMinNum(arr)
 	lenNum := maxNum - minNum + 1
 	countSlice := make([]int32, lenNum)
 	for _, value := range arr {

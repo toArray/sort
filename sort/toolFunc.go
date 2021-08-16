@@ -6,15 +6,14 @@ type CountingSortModel struct {
 	Sore int32
 }
 
-
 /*
-getMaxNumFloat64
+getMaxMinFloat64
 @Desc:获得数组内最大值和最小值
 @Param:arr 	[]int32	数组
 @Return:max int32	最大值
 @Return:min int32	最小值
 */
-func getMaxNumFloat64(arr []float64) (max float64, min float64) {
+func getMaxMinFloat64(arr []float64) (max float64, min float64) {
 	if len(arr) == 0 {
 		return
 	}
@@ -34,16 +33,14 @@ func getMaxNumFloat64(arr []float64) (max float64, min float64) {
 	return
 }
 
-
-
 /*
-getMaxNumModel
+getMaxMinOfModel
 @Desc:获得数组内最大值和最小值
 @Param:arr 	[]int32	数组
 @Return:max int32	最大值
 @Return:min int32	最小值
 */
-func getMaxNumModel(arr []CountingSortModel) (max int32, min int32) {
+func getMaxMinOfModel(arr []CountingSortModel) (max int32, min int32) {
 	if len(arr) == 0 {
 		return
 	}
@@ -64,13 +61,13 @@ func getMaxNumModel(arr []CountingSortModel) (max int32, min int32) {
 }
 
 /*
-getMaxNum
+getMaxMinNum
 @Desc:获得数组内最大值和最小值
 @Param:arr 	[]int32	数组
 @Return:max int32	最大值
 @Return:min int32	最小值
 */
-func getMaxNum(arr []int32) (max int32, min int32) {
+func getMaxMinNum(arr []int32) (max int32, min int32) {
 	if len(arr) == 0 {
 		return
 	}
@@ -90,3 +87,20 @@ func getMaxNum(arr []int32) (max int32, min int32) {
 	return
 }
 
+/*
+getMaxLenOfString
+@Desc:获得最长的字符串长度
+@Param:arr 	[]string	字符串数组
+@Return: 	int32		最大长度
+*/
+func getMaxLenOfString(arr []string) int {
+	maxLen := 0
+	for _, value := range arr {
+		l := len(value)
+		if l >= maxLen {
+			maxLen = l
+		}
+	}
+
+	return maxLen
+}
